@@ -34,6 +34,7 @@ import UIKit
 
 public enum CustomView {
 
+    case selectEmoji
     case checkGrammar
     case toneChanger
     case translate
