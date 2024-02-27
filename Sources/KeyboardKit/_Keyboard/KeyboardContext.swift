@@ -53,8 +53,11 @@ public class KeyboardContext: ObservableObject {
     @Published
     public var showKeyboard : Bool = true
 
-        @Published
+    @Published
     public var currentCustomView : CustomView = .toneChanger
+
+    @Published
+    public var selectedButton : Int?
 
     // MARK: - Published Properties
     
