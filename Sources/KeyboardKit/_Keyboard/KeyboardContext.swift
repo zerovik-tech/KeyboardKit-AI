@@ -36,6 +36,7 @@ public enum CustomView {
 
     case selectEmoji
     case checkGrammar
+    case askai
     case toneChanger
     case translate
     case reply
