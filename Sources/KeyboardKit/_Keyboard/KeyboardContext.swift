@@ -43,6 +43,7 @@ public enum CustomView {
     case continueText
     case paraphrase
     case findSynonyms
+    case emojify
 }
 
 
