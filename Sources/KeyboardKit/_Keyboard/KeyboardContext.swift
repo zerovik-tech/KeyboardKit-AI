@@ -61,6 +61,9 @@ public class KeyboardContext: ObservableObject {
     @Published
     public var selectedButton : Int?
 
+    @Published
+    public var isUserSubscribed : Bool = false
+
     // MARK: - Published Properties
     
     /// Set this to override the ``autocapitalizationType``.
