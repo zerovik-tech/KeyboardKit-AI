@@ -230,6 +230,24 @@ open class KeyboardInputViewController: UIInputViewController, KeyboardControlle
         state.keyboardContext.keyboardType = type
     }
 
+    //MARK: Open App Store
+    open func openAppStore(appId : String){
+        if let url = URL(string: "itms-apps://itunes.apple.com/app/id\(appId)?action=write-review") {
+            let selectorOpenURL = sel_registerName("openURL:")
+            let context = NSExtensionContext()
+            context.open(url as URL, completionHandler: nil)
+            
+            var responder = self as UIResponder?
+            
+            while (responder != nil){
+                if responder?.responds(to: selectorOpenURL) == true{
+                    responder?.perform(selectorOpenURL, with: url)
+                }
+                responder = responder!.next
+            }
+        }
+    }
+    
     open func openUrl(_ url: URL?) {
         let selector = sel_registerName("openURL:")
         var responder = self as UIResponder?
